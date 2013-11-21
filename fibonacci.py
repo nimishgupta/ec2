@@ -1,5 +1,13 @@
 #! /usr/bin/python
 
+import cgi
+import cgitb
+cgitb.enable ()
+
+
+form = cgi.FieldStorage ()
+
+
 
 def fib (n):
   if n <= 1: return 1
@@ -15,7 +23,16 @@ print """
     </HEAD>
 
     <BODY>
-      <h3> The requested fibonacci number is :  
 """
-print fib (10)
-print "</h3></BODY></HTML>"
+
+if "num" not in form:
+  print "<h2> Missing number </h2>"
+else:
+  print "<h3> The requested fibonacci number is :  "
+  print fib (int (form["num"].value))
+  print "</h3>"
+  print """
+      </BODY>
+    </HTML>
+  """
+
