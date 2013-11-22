@@ -23,7 +23,8 @@ var global_time = Date.now ();
 
 function _dos (req_num)
 {
-  var num = (Math.floor (Math.random ()*100) + 1)%35;
+  // var num = (Math.floor (Math.random ()*100) + 1)%35;
+  var num = 22;
   var url = fibonacci_server + "?num=" + num;
 
   var t1 = Date.now ();
@@ -44,7 +45,7 @@ function _dos (req_num)
 
 function next_delay ()
 {
-  return 0;
+  return 55;
 }
 
 
