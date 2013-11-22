@@ -1,0 +1,3 @@
+- CPU fully utilized for long but Apache does not report 503
+- Workload was CPU intensive, no memory intensive workload tried yet
+- Deterministic static workload (22 fibonacci number fixed with fixed number of requests per second)
